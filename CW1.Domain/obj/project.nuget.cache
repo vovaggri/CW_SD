@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZUxNyfCJ+a8=",
+  "success": true,
+  "projectFilePath": "/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/CW1.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/vladimirgrigoryev/.nuget/packages/yamldotnet/16.3.0/yamldotnet.16.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
