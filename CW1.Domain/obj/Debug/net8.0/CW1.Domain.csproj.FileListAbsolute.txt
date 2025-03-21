@@ -1,0 +1,13 @@
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/bin/Debug/net8.0/CW1.Domain.deps.json
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/bin/Debug/net8.0/CW1.Domain.dll
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/bin/Debug/net8.0/CW1.Domain.pdb
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.csproj.AssemblyReference.cache
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.AssemblyInfoInputs.cache
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.AssemblyInfo.cs
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.csproj.CoreCompileInputs.cache
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.sourcelink.json
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.dll
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/refint/CW1.Domain.dll
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/CW1.Domain.pdb
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW1.Domain/obj/Debug/net8.0/ref/CW1.Domain.dll
