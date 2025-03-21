@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW_SD", "CW_SD\CW_SD.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW1.Domain", "CW1.Domain\CW1.Domain.csproj", "{D9DE509D-8968-4B68-8AE3-CBED4ED67B32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuLibrary", "MenuLibrary\MenuLibrary.csproj", "{AFFB9F5D-AECE-4C5C-9AA9-C4182E9CD61E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D9DE509D-8968-4B68-8AE3-CBED4ED67B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9DE509D-8968-4B68-8AE3-CBED4ED67B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9DE509D-8968-4B68-8AE3-CBED4ED67B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFB9F5D-AECE-4C5C-9AA9-C4182E9CD61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFB9F5D-AECE-4C5C-9AA9-C4182E9CD61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFB9F5D-AECE-4C5C-9AA9-C4182E9CD61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFB9F5D-AECE-4C5C-9AA9-C4182E9CD61E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

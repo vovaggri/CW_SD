@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3ZeTvMPaYhI=",
+  "dgSpecHash": "l+tLIkbytrs=",
   "success": true,
   "projectFilePath": "/Users/vladimirgrigoryev/RiderProjects/CW_SD/CW_SD/CW_SD.csproj",
   "expectedPackageFiles": [
+    "/Users/vladimirgrigoryev/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.0-preview.2.25163.2/microsoft.extensions.dependencyinjection.10.0.0-preview.2.25163.2.nupkg.sha512",
+    "/Users/vladimirgrigoryev/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.0-preview.2.25163.2/microsoft.extensions.dependencyinjection.abstractions.10.0.0-preview.2.25163.2.nupkg.sha512",
     "/Users/vladimirgrigoryev/.nuget/packages/yamldotnet/16.3.0/yamldotnet.16.3.0.nupkg.sha512"
   ],
   "logs": []
