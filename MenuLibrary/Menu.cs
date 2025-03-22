@@ -40,7 +40,7 @@ public static class Menu
             Console.WriteLine("2. Manage Categories");
             Console.WriteLine("3. Manage Operations");
             Console.WriteLine("4. Look analytics");
-            Console.WriteLine("5. Import/Export");
+            Console.WriteLine("5. Export");
             Console.WriteLine("6. Exit");
             
             Console.Write("Choose an option: ");
@@ -59,6 +59,9 @@ public static class Menu
                     break;
                 case "4":
                     ManageAnalytics();
+                    break;
+                case "5":
+                    ManageExport();
                     break;
                 case "6":
                     exit = true;
@@ -242,6 +245,45 @@ public static class Menu
                 Console.ReadLine();
                 break;
             case "3":
+                break;
+            default:
+                Console.WriteLine("Invalid option! Try again!");
+                Console.Write("Touch enter to return to Main Menu");
+                Console.ReadLine();
+                break;
+        }
+    }
+
+    private static void ManageExport()
+    {
+        Console.Clear();
+        Console.WriteLine("-------Export-------");
+        Console.WriteLine("1. CSV");
+        Console.WriteLine("2. JSON");
+        Console.WriteLine("3. YAML");
+        Console.WriteLine("4. Return to Main Menu");
+        
+        Console.Write("Choose an option: ");
+        string option = Console.ReadLine();
+
+        switch (option)
+        {
+            case "1":
+                Middleware.ExportCsvOperation(_operationFacade);
+                Console.Write("Touch enter to return to Main Menu");
+                Console.ReadLine();
+                break;
+            case "2":
+                Middleware.ExportJsonOperation(_operationFacade);
+                Console.Write("Touch enter to return to Main Menu");
+                Console.ReadLine();
+                break;
+            case "3":
+                Middleware.ExportYamlOperation(_operationFacade);
+                Console.Write("Touch enter to return to Main Menu");
+                Console.ReadLine();
+                break;
+            case "4":
                 break;
             default:
                 Console.WriteLine("Invalid option! Try again!");

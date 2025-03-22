@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using CW1.Domain.Exporter.Interfaces;
 
 namespace CW1.Domain.DomainClasses;

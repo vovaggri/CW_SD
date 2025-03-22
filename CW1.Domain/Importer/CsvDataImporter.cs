@@ -7,12 +7,12 @@ public class CsvDataImporter : DataImporter
     protected override List<Operation> ParseData(string data)
     {
         var operations = new List<Operation>();
-        var lines = data.Split('\n');
+        var lines = data.Split(';');
 
         foreach (var operation in lines.Skip(1))
         {
             var parts = operation.Split(';');
-            if (parts.Length < 6)
+            if (parts.Length < 6 || parts.Length > 7)
             {
                 continue;
             }

@@ -2,9 +2,11 @@ using System.Globalization;
 using CW1.Domain.Analytics;
 using CW1.Domain.CommandAndDecorator;
 using CW1.Domain.DomainClasses;
+using CW1.Domain.Exporter;
 using CW1.Domain.Facades;
 using CW1.Domain.Factories;
 using CW1.Domain.Repositories.Interfaces;
+using Exception = System.Exception;
 
 namespace MenuLibrary;
 
@@ -508,6 +510,111 @@ public static class Middleware
             {
                 Console.WriteLine($"Category ID: {item.Key}");
             }
+        }
+    }
+
+    public static void ExportCsvOperation(OperationFacade operationFacade)
+    {
+        string filePath;
+
+        while (true)
+        {
+            Console.Write("Input absolut file path: ");
+            filePath = Console.ReadLine();
+
+            if (filePath.Contains(".csv"))
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. This is not csv file. Try again.");
+                continue;
+            }
+        }
+
+        try
+        {
+            var csvExportVisitor = new CsvExportVisitor(filePath);
+            var operationList = operationFacade.GetAllOperations().ToList();
+            
+            csvExportVisitor.Visit(operationList);
+            Console.WriteLine("Done!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine("Try again later.");
+        }
+    }
+
+    public static void ExportJsonOperation(OperationFacade operationFacade)
+    {
+        string filePath;
+
+        while (true)
+        {
+            Console.Write("Input absolut file path: ");
+            filePath = Console.ReadLine();
+
+            if (filePath.Contains(".json"))
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. This is not json file. Try again.");
+                continue;
+            }
+        }
+
+        try
+        {
+            var jsonExportVisitor = new JsonExportVisitor(filePath);
+            var operationList = operationFacade.GetAllOperations().ToList();
+
+            jsonExportVisitor.Visit(operationList);
+            Console.WriteLine("Done!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine("Try again later.");
+        }
+    }
+
+    public static void ExportYamlOperation(OperationFacade operationFacade)
+    {
+        string filePath;
+
+        while (true)
+        {
+            Console.Write("Input absolut file path: ");
+            filePath = Console.ReadLine();
+
+            if (filePath.Contains(".yaml"))
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. This is not yaml file. Try again.");
+                continue;
+            }
+        }
+
+        try
+        {
+            var yamlExportVisitor = new YamlExportVisitor(filePath);
+            var operationList = operationFacade.GetAllOperations().ToList();
+            yamlExportVisitor.Visit(operationList);
+
+            Console.WriteLine("Done!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine("Try again later.");
         }
     }
 }

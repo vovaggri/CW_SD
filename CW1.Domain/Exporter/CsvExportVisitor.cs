@@ -24,7 +24,7 @@ public class CsvExportVisitor : IVisitor
                                  $"{op.CategoryId};{op.Description ?? ""}");
             }
 
-            Console.WriteLine($"Data was exported to file {_filePath} succsefully.");
+            Console.WriteLine($"Data was exported to file {_filePath} successfully.");
         }
     }
 }
