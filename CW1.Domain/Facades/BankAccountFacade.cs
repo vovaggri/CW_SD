@@ -43,4 +43,26 @@ public class BankAccountFacade
     {
         return _repository.GetAll();
     }
+    
+    public void ChangeBalance(Guid accountId, decimal amount, OperationType operationType)
+    {
+        var account = _repository.GetById(accountId);
+        if (account == null)
+        {
+            throw new Exception("Account not found");
+        }
+
+        if (operationType == OperationType.Expense)
+        {
+            if (account.Balance < amount)
+            {
+                throw new Exception("Insufficient balance");
+            }
+            account.Debit(amount);
+        }
+        else
+        {
+            account.Credit(amount);
+        }
+    }
 }

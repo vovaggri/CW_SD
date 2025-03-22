@@ -14,7 +14,7 @@ public class CreateOperationCommand : ICommand
     private readonly string _description;
 
     public CreateOperationCommand(OperationFacade facade, OperationType type, Guid bankAccountId,
-        Guid categoryId, decimal amount, DateTime date,string description = null)
+        Guid categoryId, decimal amount, DateTime date, string description = null)
     {
         _facade = facade;
         _type = type;
@@ -28,5 +28,8 @@ public class CreateOperationCommand : ICommand
     public void Execute()
     {
         var operation = _facade.CreateOperation(_type, _bankAccountId, _amount, _date, _categoryId,_description);
+        Console.WriteLine($"Operation was created: {operation.Id}");
+        Console.WriteLine($"Bank Account Id: {_bankAccountId}, CategoryId: {_categoryId} Amount: {_amount}, " +
+                          $"\nDate: {_date}, Description: {_description}");
     }
 }

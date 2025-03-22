@@ -22,18 +22,6 @@ public class CategoryFacade
         return category;
     }
 
-    public void UpdateCategoryName(Guid categoryId, string newName)
-    {
-        var category = _repository.GetById(categoryId);
-        if (category == null)
-        {
-            throw new Exception("Category not found");
-        }
-        
-        category.UpdateName(newName);
-        _repository.Update(category);
-    }
-
     public void DeleteCategory(Guid categoryId)
     {
         _repository.Delete(categoryId);

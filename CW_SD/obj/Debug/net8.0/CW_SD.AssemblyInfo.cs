@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CW_SD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57f19b2cf13faaf4e5725ca3fe120dafb635e381")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc53eb13b958f520d9c0d872c9022f0566a21673")]
 [assembly: System.Reflection.AssemblyProductAttribute("CW_SD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CW_SD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

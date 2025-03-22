@@ -10,3 +10,7 @@
 /Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/obj/Debug/net8.0/refint/MenuLibrary.dll
 /Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/obj/Debug/net8.0/MenuLibrary.pdb
 /Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/obj/Debug/net8.0/ref/MenuLibrary.dll
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/bin/Debug/net8.0/CW1.Domain.dll
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/bin/Debug/net8.0/CW1.Domain.pdb
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/obj/Debug/net8.0/MenuLibrary.csproj.AssemblyReference.cache
+/Users/vladimirgrigoryev/RiderProjects/CW_SD/MenuLibrary/obj/Debug/net8.0/MenuLibr.7E56DCD1.Up2Date

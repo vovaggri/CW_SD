@@ -55,6 +55,9 @@
         }
       },
       "MenuLibrary/1.0.0": {
+        "dependencies": {
+          "CW1.Domain": "1.0.0"
+        },
         "runtime": {
           "MenuLibrary.dll": {
             "assemblyVersion": "1.0.0",

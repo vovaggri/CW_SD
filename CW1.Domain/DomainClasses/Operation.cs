@@ -10,7 +10,7 @@ public class Operation
     public decimal Amount { get; private set; }
     public DateTime Date { get; private set; }
     public Guid CategoryId { get; private set; }
-    public string Description { get; private set; }
+    public string Description { get; set; }
 
     public Operation(Guid id, OperationType type, Guid bankAccountId, decimal amount, 
         DateTime date, Guid categoryId,string description = null)

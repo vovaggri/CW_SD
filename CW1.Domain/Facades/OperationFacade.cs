@@ -23,6 +23,17 @@ public class OperationFacade
         return operation;
     }
 
+    public void EditOperation(Guid operationId, string newDescription)
+    {
+        var operation = _repository.GetById(operationId);
+        if (operation == null)
+        {
+            throw new Exception("Operation not found");
+        }
+        
+        operation.Description = newDescription;
+    }
+
     public void DeleteOperation(Guid operationId)
     {
         _repository.Delete(operationId);

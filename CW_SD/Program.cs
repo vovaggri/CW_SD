@@ -34,8 +34,5 @@ class Program
         
         Menu.MainMenu(bankAccountRepository, categoryRepository, operationRepository, domainFactory, 
             bankAccountFacade, categoryFacade,operationFacade, analytics);
-
-        Console.WriteLine("Welcome to CW_SD!");
-        Console.ReadLine();
     }
 }
