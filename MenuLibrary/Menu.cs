@@ -121,9 +121,10 @@ public static class Menu
         Console.WriteLine("-------Manage Categories-------");
         Console.WriteLine("1. Create Category");
         Console.WriteLine("2. Delete Category");
-        Console.WriteLine("3. Get a Category");
-        Console.WriteLine("4. Get All Categories");
-        Console.WriteLine("5. Return to Main Menu");
+        Console.WriteLine("3. Edit Category");
+        Console.WriteLine("4. Get a Category");
+        Console.WriteLine("5. Get All Categories");
+        Console.WriteLine("6. Return to Main Menu");
         
         Console.Write("Choose an option: ");
         string option = Console.ReadLine();
@@ -141,16 +142,21 @@ public static class Menu
                 Console.ReadLine();
                 break;
             case "3":
-                Middleware.GetCategory(_categoryFacade);
+                Middleware.EditCategory(_categoryFacade);
                 Console.Write("Touch enter to return to Main Menu");
                 Console.ReadLine();
                 break;
             case "4":
-                Middleware.GetAllCategories(_categoryFacade);
+                Middleware.GetCategory(_categoryFacade);
                 Console.Write("Touch enter to return to Main Menu");
                 Console.ReadLine();
                 break;
             case "5":
+                Middleware.GetAllCategories(_categoryFacade);
+                Console.Write("Touch enter to return to Main Menu");
+                Console.ReadLine();
+                break;
+            case "6":
                 break;
             default:
                 Console.WriteLine("Invalid option! Try again!");
@@ -166,9 +172,10 @@ public static class Menu
         Console.WriteLine("-------Manage Operations-------");
         Console.WriteLine("1. Add Operation");
         Console.WriteLine("2. Edit Operation");
-        Console.WriteLine("3. Get an Operation");
-        Console.WriteLine("4. Get all Operations");
-        Console.WriteLine("5. Return to Main Menu");
+        Console.WriteLine("3. Delete Operation");
+        Console.WriteLine("4. Get an Operation");
+        Console.WriteLine("5. Get all Operations");
+        Console.WriteLine("6. Return to Main Menu");
         
         Console.Write("Choose an option: ");
         string option = Console.ReadLine();
@@ -187,16 +194,21 @@ public static class Menu
                 Console.ReadLine();
                 break;
             case "3":
-                Middleware.GetOperation(_operationFacade);
+                Middleware.RemoveOperation(_operationFacade, _bankAccountFacade);
                 Console.Write("Touch enter to return to Main Menu");
                 Console.ReadLine();
                 break;
             case "4":
-                Middleware.GetAllOperations(_operationFacade);
+                Middleware.GetOperation(_operationFacade);
                 Console.Write("Touch enter to return to Main Menu");
                 Console.ReadLine();
                 break;
             case "5":
+                Middleware.GetAllOperations(_operationFacade);
+                Console.Write("Touch enter to return to Main Menu");
+                Console.ReadLine();
+                break;
+            case "6":
                 break;
             default:
                 Console.WriteLine("Invalid option! Try again!");
@@ -225,6 +237,7 @@ public static class Menu
                 Console.ReadLine();
                 break;
             case "2":
+                Middleware.GetExpensesGroupedByCategory(_analyticsService);
                 Console.Write("Touch enter to return to Main Menu");
                 Console.ReadLine();
                 break;

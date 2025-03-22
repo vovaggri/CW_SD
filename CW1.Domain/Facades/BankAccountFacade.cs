@@ -22,6 +22,11 @@ public class BankAccountFacade
         return account;
     }
 
+    public BankAccount? GetAccount(Guid id)
+    {
+        return _repository.GetById(id);
+    }
+
     public void UpdateAccount(Guid accountId, string newName)
     {
         var account = _repository.GetById(accountId);

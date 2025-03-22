@@ -350,13 +350,21 @@ public static class Middleware
         }
     }
 
-    public static void RemoveOperation(OperationFacade operationFacade)
+    public static void RemoveOperation(OperationFacade operationFacade, BankAccountFacade bankAccountFacade)
     {
         Console.Write("Enter the id of the Operation: ");
         if (Guid.TryParse(Console.ReadLine(), out Guid id))
         {
-            operationFacade.DeleteOperation(id);
-            Console.WriteLine("Deleted successfully.");
+            try
+            {
+                operationFacade.DeleteOperation(id, bankAccountFacade);
+                Console.WriteLine("Deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("Please try again later.");
+            }
         }
         else
         {
@@ -385,6 +393,26 @@ public static class Middleware
             Console.WriteLine();
         }
         Console.WriteLine();
+    }
+
+    public static void EditCategory(CategoryFacade categoryFacade)
+    {
+        Console.WriteLine("Enter the id of the category: ");
+        if (Guid.TryParse(Console.ReadLine(), out Guid id))
+        {
+            try
+            {
+                Console.Write("Enter the new name of the category: ");
+                string newName = Console.ReadLine();
+                categoryFacade.EditCategory(id, newName ?? "anon");
+                Console.WriteLine("Updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("Please try again later.");
+            }
+        }
     }
 
     public static void EditOperation(OperationFacade operationFacade)
@@ -441,6 +469,45 @@ public static class Middleware
 
     public static void GetExpensesGroupedByCategory(AnalyticsService analyticsService)
     {
+        DateTime startDate;
+        while (true)
+        {
+            Console.Write("Enter start date (example, 01.01.2025): ");
+            string inputStartDate = Console.ReadLine();
+            if (!DateTime.TryParseExact(inputStartDate, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate))
+            {
+                Console.WriteLine("Invalid input. Try again.");
+                continue;
+            }
+            break;
+        }
+
+        DateTime endDate;
+        while (true)
+        {
+            Console.Write("Enter end date (example, 01.01.2025): ");
+            string inputEndDate = Console.ReadLine();
+            if (!DateTime.TryParseExact(inputEndDate, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out endDate))
+            {
+                Console.WriteLine("Invalid input. Try again.");
+                continue;
+            }
+            break;
+        }
         
+        var expenses = analyticsService.GetExpensesGroupedByCategory(startDate, endDate);
+
+        if (expenses.Count == 0)
+        {
+            Console.WriteLine("No categories found on this time.");
+        }
+        else
+        {
+            Console.WriteLine("Expenses:");
+            foreach (var item in expenses)
+            {
+                Console.WriteLine($"Category ID: {item.Key}");
+            }
+        }
     }
 }

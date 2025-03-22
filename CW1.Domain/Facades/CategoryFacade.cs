@@ -22,6 +22,16 @@ public class CategoryFacade
         return category;
     }
 
+    public void EditCategory(Guid categoryId, string newName)
+    {
+        var category = _repository.GetById(categoryId);
+        if (category == null)
+        {
+            throw new Exception("Operation not found");
+        }
+        category.UpdateName(newName);
+    }
+
     public void DeleteCategory(Guid categoryId)
     {
         _repository.Delete(categoryId);

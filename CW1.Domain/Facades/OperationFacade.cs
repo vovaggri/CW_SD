@@ -34,8 +34,33 @@ public class OperationFacade
         operation.Description = newDescription;
     }
 
-    public void DeleteOperation(Guid operationId)
+    public void DeleteOperation(Guid operationId, BankAccountFacade bankAccountFacade)
     {
+        var operation = _repository.GetById(operationId);
+        if (operation == null)
+        {
+            throw new Exception("Operation not found");
+        }
+
+        decimal amount = operation.Amount;
+        if (operation.Type == OperationType.Expense)
+        {
+            var bankAccount = bankAccountFacade.GetAccount(operation.BankAccountId);
+            if (bankAccount == null)
+            {
+                throw new Exception("Bank account not found");
+            }
+            bankAccountFacade.ChangeBalance(bankAccount.Id, amount, OperationType.Income);
+        }
+        else
+        {
+            var bankAccount = bankAccountFacade.GetAccount(operation.BankAccountId);
+            if (bankAccount == null)
+            {
+                throw new Exception("Bank account not found");
+            }
+            bankAccountFacade.ChangeBalance(bankAccount.Id, amount, OperationType.Expense);
+        }
         _repository.Delete(operationId);
     }
 
